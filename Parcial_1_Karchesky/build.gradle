@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'mysql:mysql-connector-java:8.0.26'
+    implementation 'org.hibernate:hibernate-core:5.5.7.Final'
+    implementation 'org.hibernate:hibernate-entitymanager:5.5.7.Final'
+    implementation 'com.abranhe:bigdecimal:1.0.1'
+    implementation 'com.abranhe:bigdecimal:1.0.1'
+    implementation 'org.firebirdsql:decimal-java:2.0.0'
+    implementation 'org.firebirdsql:decimal-java:2.0.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
