@@ -68,7 +68,7 @@ public class Pago implements ABM{
         return monto;
     }
 
-    public void setMonto(DecimalFormat monto) {
+    public void setMonto(BigDecimal monto) {
         this.monto = monto;
     }
 }
