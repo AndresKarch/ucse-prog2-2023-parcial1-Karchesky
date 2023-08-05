@@ -17,19 +17,20 @@ import java.util.List;
 public class Logica_ABM {
     public void alta_pago(int id_reserva,Date fecha_creacion, String tipo, String medio, BigDecimal monto)
     {
-        BigDecimal acumulador;
+        BigDecimal acumulador = null;
         List<Pago> pagos_filtro = encontrar_pagos(id_reserva);
         for (Pago pagos: pagos_filtro)
         {
             BigDecimal monto_obtenido = pagos.getMonto();
-            acumulador = monto_obtenido;
+            acumulador = monto_obtenido; //+ acumulador;
         }
 
         if (monto == acumulador)
         {
-
+            Pago pago = new Pago(id_reserva,fecha_creacion,monto,tipo,medio);
+            pago.alta(pago);
         }
-        Pago pago = new Pago(id_reserva,fecha_creacion,monto,tipo,medio);
+
 
     }
     public List<Pago> encontrar_pagos(int id_reserva)
